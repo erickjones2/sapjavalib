@@ -1,6 +1,6 @@
-def mvnHome = tool 'M2_HOME'
 pipeline {
 	agent any
+	def mvnHome = tool 'M2_HOME'
 	stages {
 		stage("Cleaning") {
 			steps {
