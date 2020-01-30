@@ -1,20 +1,19 @@
 pipeline {
 	agent any
-	def mvnHome = tool 'M2_HOME'
 	stages {
 		stage("Cleaning") {
 			steps {
-				sh "'${mvnHome}/bin/mvn' clean"
+				sh "/opt/maven/bin/mvn clean"
 			}
     		}
     		stage("Testing") {
 			steps {
-				sh "'${mvnHome}/bin/mvn' test"
+				sh "/opt/maven/bin/mvn test"
 			}
     		}
 		stage("Packaging") {
 			steps {
-				sh "'${mvnHome}/bin/mvn' package"
+				sh "/opt/maven/bin/mvn package"
 			}
     		}
 	}
