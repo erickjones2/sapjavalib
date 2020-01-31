@@ -1,7 +1,9 @@
 pipeline {
 	agent any
 	stages {
+		parallel(
 		stage("Cleaning") {
+			
 			steps {
 				sh "/opt/maven/bin/mvn clean"
 			}
@@ -16,5 +18,6 @@ pipeline {
 				sh "/opt/maven/bin/mvn package"
 			}
     		}
+			)
 	}
 }
