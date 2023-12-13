@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.cts</groupId>
-  <artifactId>example_app</artifactId>
+  <artifactId>SAP_javalib</artifactId>
   <version>1.0</version>
 
   <name>SAP_javalib</name>
